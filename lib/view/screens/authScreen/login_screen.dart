@@ -40,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: mediaQuerySize.height * 0.3.h,
                       width: mediaQuerySize.width * 0.5.w,
                       decoration: BoxDecoration(
-                        image: DecorationImage(fit: BoxFit.cover, image: AssetImage('assets/pngs/rafiki.png')),
+                        image: DecorationImage(fit: BoxFit.contain, image: AssetImage('assets/pngs/rafiki.png')),
                       ),
                     ),
                   ),

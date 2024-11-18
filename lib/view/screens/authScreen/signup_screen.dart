@@ -97,7 +97,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           if (value!.isEmpty) {
                             return 'Please fill this field';
                           }
-                          if (value.isValidEmail()) {
+                          if (!value.isValidEmail()) {
                             return 'Please enter correct email';
                           }
                           return null;
@@ -122,7 +122,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           if (value!.isEmpty) {
                             return 'Please fill this field';
                           }
-                          if (value.isMinLength()) {
+                          if (!value.isMinLength()) {
                             return 'Please Enter minimum 6 characters';
                           }
                           return null;
