@@ -1,9 +1,9 @@
 import 'dart:ui';
 
 class AppColors {
-  static Color primaryColor = const Color(0xffF72CE);
-  static Color textFieldColor = const Color.fromRGBO(245, 245, 245, 1);
-  static Color textFieldTextColor = const Color(0xffF2F2F2);
+  static Color primaryColor = const Color(0xff0F72CE);
+  static Color textFieldColor = const Color(0xffF5F5F5);
+  static Color textFieldTextColor = const Color(0xFFF2F2F2);
   static Color blackWithOpacity = const Color(0xff3C3C3C);
   static Color blackColor = const Color(0xff000000);
   static Color simpleTextColor = const Color(0xff2D3748);

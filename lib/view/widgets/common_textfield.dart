@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lms_portal/controllers/utills/myapp_colors.dart';
 import 'package:lms_portal/controllers/utills/myapp_styles.dart';
 
@@ -33,21 +34,21 @@ class CommonTextfield {
           borderRadius: BorderRadius.circular(3),
         ),
         hintText: title ?? 'Email',
-        hintStyle: AppTextStyles.simpleText.copyWith(fontSize: 12, color: AppColors.blackColor),
+        hintStyle: AppTextStyles.simpleText.copyWith(fontSize: 12.sp, color: AppColors.greyButton),
         filled: true,
         fillColor: bgColor ?? AppColors.textFieldColor,
         isCollapsed: true,
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(3),
+          borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide(color: AppColors.primaryColor),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(3),
+          borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide(color: borderColor ?? AppColors.textFieldColor),
         ),
         contentPadding: EdgeInsets.symmetric(
-          horizontal: horizentalPadding ?? 1.2,
-          vertical: verticalPadding ?? 2,
+          horizontal: horizentalPadding ?? 10.w,
+          vertical: verticalPadding ?? 10.h,
         ),
       ),
     );
