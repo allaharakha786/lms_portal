@@ -32,7 +32,7 @@ class CommonTextfield {
       cursorColor: AppColors.primaryColor,
       decoration: InputDecoration(
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(3),
+          borderRadius: BorderRadius.circular(10),
         ),
         hintText: title ?? 'Email',
         hintStyle: AppTextStyles.simpleText.copyWith(fontSize: 12.sp, color: AppColors.greyButton),
@@ -48,8 +48,8 @@ class CommonTextfield {
           borderSide: BorderSide(color: borderColor ?? AppColors.textFieldColor),
         ),
         contentPadding: EdgeInsets.symmetric(
-          horizontal: horizentalPadding ?? 8.w,
-          vertical: verticalPadding ?? 8.h,
+          horizontal: horizentalPadding ?? 10.w,
+          vertical: verticalPadding ?? 10.h,
         ),
       ),
     );
