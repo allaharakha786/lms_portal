@@ -3,8 +3,6 @@ import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lms_portal/view/screens/splash_screen.dart';
 
-import 'view/screens/authScreen/login_screen.dart';
-
 void main() {
   runApp(const MyApp());
 }

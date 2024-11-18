@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:lms_portal/controllers/utills/myapp_colors.dart';
 import 'package:lms_portal/controllers/utills/myapp_styles.dart';
 import 'package:lms_portal/controllers/utills/validations.dart';
+import 'package:lms_portal/view/screens/authScreen/login_screen.dart';
 import 'package:lms_portal/view/widgets/common_botton.dart';
 import 'package:lms_portal/view/widgets/common_textfield.dart';
 
@@ -177,7 +178,11 @@ class _SignupScreenState extends State<SignupScreen> {
                           Expanded(
                             child: CommonBotton().customElevatedButton(
                               onTap: () {
-                                if (key.currentState!.validate()) {}
+                                if (key.currentState!.validate()) {
+                                  Get.off(() => LoginScreen(
+                                        category: isStudent.value ? 'Student' : 'Teacher',
+                                      ));
+                                }
                               },
                               borderRadius: 10,
                               title: Text(

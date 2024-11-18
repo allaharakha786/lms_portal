@@ -1,7 +1,11 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:lms_portal/controllers/utills/myapp_colors.dart';
 import 'package:lms_portal/controllers/utills/myapp_styles.dart';
+import 'package:lms_portal/view/screens/authScreen/login_screen.dart';
+import 'package:lms_portal/view/screens/authScreen/signup_screen.dart';
 import 'package:lms_portal/view/widgets/common_botton.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -35,6 +39,9 @@ class WelcomeScreen extends StatelessWidget {
                   children: [
                     Expanded(
                       child: CommonBotton().customElevatedButton(
+                        onTap: () {
+                          Get.to(() => LoginScreen(category: 'Student'));
+                        },
                         borderRadius: 10,
                         title: Text(
                           'Continue as student',
@@ -51,6 +58,9 @@ class WelcomeScreen extends StatelessWidget {
                   children: [
                     Expanded(
                       child: CommonBotton().customElevatedButton(
+                        onTap: () {
+                          Get.to(() => LoginScreen(category: 'Teacher'));
+                        },
                         borderRadius: 10,
                         title: Text(
                           'Continue as teacher',
@@ -67,7 +77,13 @@ class WelcomeScreen extends StatelessWidget {
                     text: TextSpan(
                   children: [
                     TextSpan(text: "Don't have an account? ", style: AppTextStyles.simpleText),
-                    TextSpan(text: 'Sign up', style: AppTextStyles.simpleText.copyWith(color: AppColors.primaryColor)),
+                    TextSpan(
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            Get.to(() => SignupScreen());
+                          },
+                        text: 'Sign up',
+                        style: AppTextStyles.simpleText.copyWith(color: AppColors.primaryColor)),
                   ],
                 ))
               ],
