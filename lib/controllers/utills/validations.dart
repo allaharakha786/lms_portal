@@ -7,6 +7,6 @@ extension ValidationExtension on String {
   }
 
   bool isMinLength() {
-    return length >= 8;
+    return length >= 6;
   }
 }
