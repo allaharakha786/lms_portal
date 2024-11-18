@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lms_portal/view/screens/authScreen/signup_screen.dart';
+import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lms_portal/view/screens/splash_screen.dart';
 
 import 'view/screens/authScreen/login_screen.dart';
 
@@ -18,10 +19,11 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       designSize: Size(mediaQuerySize.width, mediaQuerySize.height),
-      child: MaterialApp(
+      child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(),
-        home: SignupScreen(),
+        home: const SplashScreen(),
       ),
     );
   }
