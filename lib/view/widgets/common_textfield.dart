@@ -31,7 +31,7 @@ class CommonTextfield {
       cursorColor: AppColors.primaryColor,
       decoration: InputDecoration(
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(3),
+          borderRadius: BorderRadius.circular(10),
         ),
         hintText: title ?? 'Email',
         hintStyle: AppTextStyles.simpleText.copyWith(fontSize: 12.sp, color: AppColors.greyButton),

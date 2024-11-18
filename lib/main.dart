@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(),
-        home: const LoginScreen(),
+        home: SignupScreen(),
       ),
     );
   }
