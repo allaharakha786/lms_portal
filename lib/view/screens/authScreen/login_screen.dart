@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lms_portal/controllers/utills/myapp_colors.dart';
+
+import '../../widgets/common_textfield.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -20,9 +23,13 @@ class _LoginScreenState extends State<LoginScreen> {
             alignment: Alignment.bottomLeft,
             child: Text('Sign in',style: TextStyle(fontFamily:'bold',fontSize: 36),),
           ),
-        )
+        ),
+       CommonTextfield().customTextFormField(
+        bgColor: AppColors.textFieldTextColor,
+        title: 'Enter your Email or Phone Number'
+       ),
     ],
-   )),
+   ),),
     );
   }
 }
