@@ -38,6 +38,10 @@ dependencies:
   flutter_screenutil: ^5.9.3
   get: ^4.6.6
   svg_flutter: ^0.0.1
+  flutter_pdfview: ^1.3.4
+  intl: ^0.19.0
+  fluttertoast: ^8.2.8
+  path_provider: ^2.1.5
 
 dev_dependencies:
   flutter_test:
@@ -65,6 +69,7 @@ flutter:
   assets:
     - assets/pngs/
     - assets/svgs/
+    - assets/pdfs/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

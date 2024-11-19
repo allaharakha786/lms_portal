@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:lms_portal/controllers/utills/myapp_colors.dart';
 import 'package:lms_portal/controllers/utills/myapp_styles.dart';
+import 'package:lms_portal/view/screens/lesson_details.dart';
 
 class CoursesDetailsScreen extends StatelessWidget {
   const CoursesDetailsScreen({super.key});
@@ -33,29 +35,34 @@ class CoursesDetailsScreen extends StatelessWidget {
               SizedBox(
                 height: mediaQuerySize.height * 0.05.h,
               ),
-              Container(
-                height: mediaQuerySize.height * 0.3.h,
-                width: mediaQuerySize.width,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: AppColors.primaryColor, image: DecorationImage(fit: BoxFit.cover, image: AssetImage('assets/pngs/lessons_image.jpg'))),
+              GestureDetector(
+                onTap: () {
+                  Get.to(() => LessonDetailsScreen());
+                },
                 child: Container(
                   height: mediaQuerySize.height * 0.3.h,
                   width: mediaQuerySize.width,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: AppColors.blackColor.withOpacity(0.75),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Lessons',
-                        style: AppTextStyles.headingTextStyle.copyWith(color: Colors.amber, fontSize: 25),
-                      ),
-                      Text(
-                        'Engaging lessons to build knowledge.',
-                        style: AppTextStyles.simpleText.copyWith(color: AppColors.whiteColor, fontSize: 13),
-                      ),
-                    ],
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: AppColors.primaryColor, image: DecorationImage(fit: BoxFit.cover, image: AssetImage('assets/pngs/lessons_image.jpg'))),
+                  child: Container(
+                    height: mediaQuerySize.height * 0.3.h,
+                    width: mediaQuerySize.width,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: AppColors.blackColor.withOpacity(0.75),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Lessons',
+                          style: AppTextStyles.headingTextStyle.copyWith(color: Colors.amber, fontSize: 25),
+                        ),
+                        Text(
+                          'Engaging lessons to build knowledge.',
+                          style: AppTextStyles.simpleText.copyWith(color: AppColors.whiteColor, fontSize: 13),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
