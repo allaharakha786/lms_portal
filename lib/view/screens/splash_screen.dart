@@ -15,7 +15,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Future.delayed(const Duration(seconds: 3), () => Get.off(() => const WelcomeScreen()));
-
     super.initState();
   }
 
@@ -25,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     return Scaffold(
       body: Container(
-        color: AppColors.primaryColor,
+        color: AppColors.whiteColor,
         height: mediaQuerySize.height,
         width: mediaQuerySize.width,
         child: Column(
@@ -34,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Container(
               height: mediaQuerySize.height * 0.4.h,
               width: mediaQuerySize.width * 0.7.w,
-              decoration: BoxDecoration(image: DecorationImage(fit: BoxFit.contain, image: AssetImage('assets/pngs/lms_logo.png'))),
+              decoration: BoxDecoration(image: DecorationImage(fit: BoxFit.contain, image: AssetImage('assets/pngs/lms_logo.jpeg'))),
             ),
           ],
         ),

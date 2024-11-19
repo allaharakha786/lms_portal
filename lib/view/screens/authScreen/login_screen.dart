@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:lms_portal/controllers/utills/myapp_colors.dart';
 import 'package:lms_portal/controllers/utills/validations.dart';
+import 'package:lms_portal/view/screens/studentPanel/main_screen.dart';
 
 import '../../../controllers/utills/myapp_styles.dart';
 import '../../widgets/common_botton.dart';
@@ -121,7 +123,11 @@ class _LoginScreenState extends State<LoginScreen> {
                           width: mediaQuerySize.width * 0.1.w,
                           borderRadius: 10,
                           onTap: () {
-                            if (key.currentState!.validate()) {}
+                            if (key.currentState!.validate()) {
+                              if (widget.category.toLowerCase().contains('student')) {
+                                Get.to(() => MainScreen());
+                              }
+                            }
                           },
                         ),
                       ),
